@@ -20,5 +20,12 @@ Please edit application/libraries/Space.php
 $photo = "myfile.png";
 $new_filename = "mynewfilename.png";
 
-$this->space->space->UploadFile($photo, "public", $new_filename, "image/png");
+$this->space->space->UploadFile($photo, "public", "path_for_your_file/".$new_filename, "image/png");
+#space will create new folder automatically
+```
+<h2>How to delete files from your Space</h2>
+
+```
+$photo = "myfile.png";
+$this->space->space->DeleteObject("path_for_your_file/".$photo);
 ```

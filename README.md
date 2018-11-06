@@ -3,7 +3,7 @@ Library for using Digital Ocean Spaces  storage with Codeigniter Framework.
 This is based on https://github.com/SociallyDev/Spaces-API.
 Visit the link to see the original usage.
 
-<h2>How to Connetc to your Space</h2>
+<h2>How to Connect to your Space</h2>
 Please edit application/libraries/Space.php 
 
 ```
@@ -12,5 +12,13 @@ Please edit application/libraries/Space.php
   $space_name = "xxxxxx";
   $region = "xxxxxx";
         
- $this->space = new SpacesConnect($key, $secret, $space_name, $region); <br>
+ $this->space = new SpacesConnect($key, $secret, $space_name, $region); 
+```
+<h2>How to upload files to your Space</h2>
+
+```
+$photo = "myfile.png";
+$new_filename = "mynewfilename.png";
+
+$this->space->space->UploadFile($photo, "public", $new_filename, "image/png");
 ```

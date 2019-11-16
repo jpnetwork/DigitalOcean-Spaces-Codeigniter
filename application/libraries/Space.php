@@ -8,10 +8,10 @@ class Space {
  
     public function __construct()
     {
-        $key = "xxxxxxxxx";
-        $secret = "xxxxxxxxx";
-        $space_name = "xxxxxx";
-        $region = "xxxxxx";
+        $key = "YOUR_KEY";
+        $secret = "YOUR_SECRET";
+        $space_name = "SPACE_NAME";
+        $region = "REGION";
         
         $this->space = new SpacesConnect($key, $secret, $space_name, $region); 
     }

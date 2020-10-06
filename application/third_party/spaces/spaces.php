@@ -208,6 +208,19 @@ class SpacesConnect {
         $this->HandleAWSException($e);
        }
     }
+  
+    function fileExists($file_name = "") {
+      try {
+            $result = $this->client->getObject([
+                'Bucket' => $this->space,
+                'Key' => $file_name,
+            ]);
+            return $this->ObjReturn($result->toArray()) ? true : false;
+        }
+        catch (\Exception $e) {
+            return false;
+        }
+    }
 
     /*
       Makes an object private, (restricted) access.
